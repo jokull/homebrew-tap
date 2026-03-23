@@ -8,6 +8,8 @@ class Udl < Formula
   version "0.1.0"
   license "MIT"
 
+  depends_on "par2"
+
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/jokull/udl/releases/download/v0.1.0/udl_0.1.0_darwin_amd64.tar.gz"
