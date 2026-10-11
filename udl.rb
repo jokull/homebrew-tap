@@ -5,23 +5,23 @@
 class Udl < Formula
   desc "Single Go binary replacing Sonarr + Radarr + NZBGet for Usenet-based media automation"
   homepage "https://github.com/jokull/udl"
-  version "0.2.3"
+  version "0.2.4"
   license "MIT"
 
   depends_on "par2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jokull/udl/releases/download/v0.2.3/udl_0.2.3_darwin_amd64.tar.gz"
-      sha256 "35520b1f604a9041ac9b5886848fffcd5a5969e233a75eba5023c11598861c0c"
+      url "https://github.com/jokull/udl/releases/download/v0.2.4/udl_0.2.4_darwin_amd64.tar.gz"
+      sha256 "ae7557e601be4b0657a000dd62e6d5b0a15622ea3591803db2196bc5d720ecfa"
 
       define_method(:install) do
         bin.install "udl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jokull/udl/releases/download/v0.2.3/udl_0.2.3_darwin_arm64.tar.gz"
-      sha256 "74fe38f2d75ac8ef5b41bce9e7634db5983e3aadb9234fa7c39e2b450e6b4f14"
+      url "https://github.com/jokull/udl/releases/download/v0.2.4/udl_0.2.4_darwin_arm64.tar.gz"
+      sha256 "8d15c77ce28ec60ced7e333fc2fe8bf571dff6c78b464625a54e3198a6edd9b4"
 
       define_method(:install) do
         bin.install "udl"
@@ -31,15 +31,15 @@ class Udl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jokull/udl/releases/download/v0.2.3/udl_0.2.3_linux_amd64.tar.gz"
-      sha256 "dbbb4174cbe39f6db3bbd86b2f6c7662cf5e3bc995666cd166f8463bbaabc851"
+      url "https://github.com/jokull/udl/releases/download/v0.2.4/udl_0.2.4_linux_amd64.tar.gz"
+      sha256 "b77fe3b7d29440a03b9d353e5a89aa805fc8b8dd686bbd97cf4f9e0ec5df6319"
       define_method(:install) do
         bin.install "udl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jokull/udl/releases/download/v0.2.3/udl_0.2.3_linux_arm64.tar.gz"
-      sha256 "d8872dc4e6d428026249ebc319e07cb424e70f28dd0062561976633cb1d3c8ec"
+      url "https://github.com/jokull/udl/releases/download/v0.2.4/udl_0.2.4_linux_arm64.tar.gz"
+      sha256 "c7beb103c8391ef45695635be28c9b87445f2c87cbde1047d2f6ece20d15aa83"
       define_method(:install) do
         bin.install "udl"
       end
