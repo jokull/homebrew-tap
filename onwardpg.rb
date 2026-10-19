@@ -5,20 +5,20 @@
 class Onwardpg < Formula
   desc "Forward-only PostgreSQL schema-diff and migration planner"
   homepage "https://github.com/jokull/onwardpg"
-  version "0.1.0-preview.14"
+  version "0.1.0-preview.15"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jokull/onwardpg/releases/download/v0.1.0-preview.14/onwardpg_0.1.0-preview.14_darwin_amd64.tar.gz"
-      sha256 "9b764f84ff196379dac6d01acb29738bca7f246b1fbb5d1c210c020df49564b3"
+      url "https://github.com/jokull/onwardpg/releases/download/v0.1.0-preview.15/onwardpg_0.1.0-preview.15_darwin_amd64.tar.gz"
+      sha256 "c11ee8d2d2f1ca3cdaa85ea751942eecbcfdbcb199b5dfda854a23261b798621"
       define_method(:install) do
         bin.install "onwardpg"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jokull/onwardpg/releases/download/v0.1.0-preview.14/onwardpg_0.1.0-preview.14_darwin_arm64.tar.gz"
-      sha256 "82f2c554a50edd0dc139d38acd052c767eb55c3cbc1a854e6c6498fc3289ac0b"
+      url "https://github.com/jokull/onwardpg/releases/download/v0.1.0-preview.15/onwardpg_0.1.0-preview.15_darwin_arm64.tar.gz"
+      sha256 "fa6ddb3af324b6ba8d95569230aff7e98d755b5d4595b56fc5d1684f18bb6830"
       define_method(:install) do
         bin.install "onwardpg"
       end
@@ -27,15 +27,15 @@ class Onwardpg < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jokull/onwardpg/releases/download/v0.1.0-preview.14/onwardpg_0.1.0-preview.14_linux_amd64.tar.gz"
-      sha256 "149cf168ddd803f03298586b6af2e7ef8551ad1e26e9ef0da6fd587fdc737805"
+      url "https://github.com/jokull/onwardpg/releases/download/v0.1.0-preview.15/onwardpg_0.1.0-preview.15_linux_amd64.tar.gz"
+      sha256 "1bafc49b8d11e5bba42a4a297ed71b3742b457ac48c7bf244acd7bc8517143b6"
       define_method(:install) do
         bin.install "onwardpg"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jokull/onwardpg/releases/download/v0.1.0-preview.14/onwardpg_0.1.0-preview.14_linux_arm64.tar.gz"
-      sha256 "7c279f5f778b35d6f1887af1d958f52ee467d61323c767510c20b72cc9a4256e"
+      url "https://github.com/jokull/onwardpg/releases/download/v0.1.0-preview.15/onwardpg_0.1.0-preview.15_linux_arm64.tar.gz"
+      sha256 "5b86a009b75dd18d78c78ee48e5bac2a324bdec7e2489206aa32409a770f0819"
       define_method(:install) do
         bin.install "onwardpg"
       end
@@ -43,6 +43,6 @@ class Onwardpg < Formula
   end
 
   test do
-    assert_match '"version":"v0.1.0-preview.14"', shell_output("#{bin}/onwardpg version")
+    assert_match '"version":"v0.1.0-preview.15"', shell_output("#{bin}/onwardpg version")
   end
 end
